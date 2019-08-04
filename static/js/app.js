@@ -51,6 +51,7 @@ function buildCharts(sample) {
       marker: {
         color: markerColors,   //markerColors,
         size: markerSize,
+        colorscale: "Viridis"
         //sizemode: "area",
         //showscale: true
       },
@@ -62,7 +63,7 @@ function buildCharts(sample) {
 
     var layout = {
       xaxis: { 
-        title: "<b>OTU ID</b>"
+        title: "<b>Operational Taxonomic Units (OTU) ID</b>"
       },
       yaxis : {
         title: "<b>Bacterial Sample Frequency</b>",
@@ -88,9 +89,9 @@ function buildCharts(sample) {
     }];
 
     var layout ={
-      title: "<b>Belly Button Biodiversity - Top 10</b>",
-      height: 520,   
-      width: 520 
+      title: "<b>Belly Button Biodiversity - Top 10</b> <br> Patient Sample Number",
+      height: 500,   
+      width: 500 
     };
 
     Plotly.newPlot("pie", data, layout);
@@ -161,8 +162,8 @@ function buildCharts(sample) {
         }
         }],
     title: '<b>Belly Button Washing Frequency</b> <br> Scrubs per Week',
-    height: 550,    // resize to fit
-    width: 550,     // resize to fit
+    height: 500,    // resize to fit
+    width: 500,     // resize to fit
     xaxis: {zeroline:false, showticklabels:false,
                 showgrid: false, range: [-1, 1]},
     yaxis: {zeroline:false, showticklabels:false,
